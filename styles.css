@@ -1,9 +1,8 @@
 * {
-    margin: 0;
+    margin: 10px solid transparent;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-image: url(confetes.gif);
     font-family: Arial, sans-serif;
@@ -12,25 +11,31 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
+
 .container {
+    background-image: url(confetes.gif);
     text-align: center;
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    
+    max-width: 700px; 
+    display: flex;
+    align-items: center; }
+
+#sla {
+    text-align:center;
 }
 
-#sla{
-    float: left;
-}
 
 h1 {
     color: #333;
     margin-bottom: 20px;
 }
+
 
 .current-time {
     margin-bottom: 20px;
@@ -54,6 +59,49 @@ p {
     margin: 10px 0;
 }
 
-#euzinho{
-    float: right;
+
+#euzinho {
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border-radius: 10%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #sla {
+        margin-bottom: 20px; 
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #countdown-timer {
+        font-size: 2.5em;
+    }
+
+    #euzinho {
+        width: 120px;
+        height: 120px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    #countdown-timer {
+        font-size: 2em;
+    }
+    #euzinho {
+        width: 100px;
+        height: 100px;
+        margin-top: 15px;
+    }
 }
